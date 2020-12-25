@@ -34,7 +34,7 @@ class ProfileViewController: UIViewController {
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: nil, action: nil)
         
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: nil)
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
         navigationItem.rightBarButtonItem?.tintColor = whiteColor
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!], for: UIControl.State.normal)
         
@@ -45,5 +45,13 @@ class ProfileViewController: UIViewController {
         
         self.navigationController?.navigationBar.backIndicatorImage = backButtonImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
+    }
+    
+    @objc func editTapped(sender: UIButton!) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let settingsVC = storyboard.instantiateViewController(withIdentifier: "settingsViewController") as! SettingsViewController
+        navigationController?.pushViewController(settingsVC, animated: true)
+        print("Button tapped")
+        
     }
 }
