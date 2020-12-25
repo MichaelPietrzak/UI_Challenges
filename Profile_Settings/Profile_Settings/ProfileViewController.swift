@@ -38,9 +38,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet var recentFollowersView: UIView!
     
     @IBOutlet var recentPostsLabel: UILabel!
-    @IBOutlet var seeAllPostsLabel: UILabel!
+    @IBOutlet var seeAllPostsButton: UIButton!
     @IBOutlet var recentFollowersLabel: UILabel!
-    @IBOutlet var seeAllRecentFollowersLabel: UILabel!
+    @IBOutlet var seeAllRecentFollowersButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,64 +72,67 @@ class ProfileViewController: UIViewController {
         userImage.clipsToBounds = true
   
         nameLabel.text = "Lori Schneider"
-        nameLabel.font = UIFont(name: "Futura-Bold", size: 22)
         nameLabel.textAlignment = .center
         nameLabel.textColor = whiteColor
+        nameLabel.font = UIFont(name: "Futura-Bold", size: 22)
         
         countryLabel.text = "London, UK"
-        countryLabel.font = UIFont(name: "Futura-Medium", size: 16)
         countryLabel.textAlignment = .center
         countryLabel.textColor = whiteColor
+        countryLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
         statusView.backgroundColor = grayColor
         postsView.backgroundColor = grayColor
         followingView.backgroundColor = grayColor
         followersView.backgroundColor = grayColor
         
-        postData.font = UIFont(name: "Futura-Medium", size: 16)
-        postData.textColor = greenColor
         postData.text = "203"
+        postData.textColor = greenColor
+        postData.font = UIFont(name: "Futura-Medium", size: 16)
         
-        postLabel.font = UIFont(name: "Futura-Medium", size: 14)
-        postLabel.textColor = whiteColor
         postLabel.text = "Posts"
+        postLabel.textColor = whiteColor
+        postLabel.font = UIFont(name: "Futura-Medium", size: 14)
             
-        followingData.font = UIFont(name: "Futura-Medium", size: 16)
-        followingData.textColor = greenColor
         followingData.text = "125"
+        followingData.textColor = greenColor
+        followingData.font = UIFont(name: "Futura-Medium", size: 16)
             
-        followingLabel.font = UIFont(name: "Futura-Medium", size: 14)
-        followingLabel.textColor = whiteColor
         followingLabel.text = "Following"
+        followingLabel.textColor = whiteColor
+        followingLabel.font = UIFont(name: "Futura-Medium", size: 14)
             
-        followersData.font = UIFont(name: "Futura-Medium", size: 16)
-        followersData.textColor = greenColor
         followersData.text = "3501"
+        followersData.textColor = greenColor
+        followersData.font = UIFont(name: "Futura-Medium", size: 16)
                 
-        followersLabel.font = UIFont(name: "Futura-Medium", size: 14)
-        followersLabel.textColor = whiteColor
         followersLabel.text = "Followers"
+        followersLabel.textColor = whiteColor
+        followersLabel.font = UIFont(name: "Futura-Medium", size: 14)
         
         recentPostsView.backgroundColor = grayColor
         recentFollowersView.backgroundColor = grayColor
         
         recentPostsLabel.text = "Recent Posts"
-        recentPostsLabel.font = UIFont(name: "Futura-Medium", size: 16)
         recentPostsLabel.textAlignment = .left
         recentPostsLabel.textColor = whiteColor
+        recentPostsLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
-        seeAllPostsLabel.font = UIFont(name: "Futura-Medium", size: 16)
-        seeAllPostsLabel.textColor = greenColor
-        seeAllPostsLabel.text = "See All"
+        seeAllPostsButton.titleLabel?.text = "See All"
+        // TODO: - finish UIButton styling
+        seeAllPostsButton.titleLabel?.textAlignment = .right
+        seeAllPostsButton.titleLabel?.textColor = greenColor
+        seeAllPostsButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 16)
         
         recentFollowersLabel.text = "Recent Followers"
-        recentFollowersLabel.font = UIFont(name: "Futura-Medium", size: 16)
         recentFollowersLabel.textAlignment = .left
         recentFollowersLabel.textColor = whiteColor
+        recentFollowersLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
-        seeAllRecentFollowersLabel.font = UIFont(name: "Futura-Medium", size: 16)
-        seeAllRecentFollowersLabel.textColor = greenColor
-        seeAllRecentFollowersLabel.text = "See All"
+        seeAllRecentFollowersButton.titleLabel?.text = "See All"
+        seeAllRecentFollowersButton.titleLabel?.textAlignment = .right
+        seeAllRecentFollowersButton.titleLabel?.textColor = greenColor
+        seeAllRecentFollowersButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 16)
         
         // MARK: - Navigation Bar
         self.navigationController?.navigationBar.tintColor = whiteColor

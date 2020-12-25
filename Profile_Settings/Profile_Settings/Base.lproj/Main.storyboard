@@ -194,13 +194,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9O-Qt-NpK" userLabel="See All Label">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-8B-xTM" userLabel="See All Button">
                                                 <rect key="frame" x="253" y="45" width="122" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="See all"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -214,13 +212,11 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-SG-cL0" userLabel="See All Label">
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FUE-GQ-QfW" userLabel="See All Button">
                                                 <rect key="frame" x="253" y="45" width="122" height="31"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                                <state key="normal" title="See all"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
@@ -291,8 +287,8 @@
                         <outlet property="recentFollowersView" destination="5QI-Ig-pyZ" id="sbI-LT-KWU"/>
                         <outlet property="recentPostsLabel" destination="YR3-iJ-06E" id="eRV-Uz-dax"/>
                         <outlet property="recentPostsView" destination="19X-Jm-75Q" id="Qpl-cu-jxU"/>
-                        <outlet property="seeAllPostsLabel" destination="o9O-Qt-NpK" id="RdM-UQ-K3d"/>
-                        <outlet property="seeAllRecentFollowersLabel" destination="8gD-SG-cL0" id="fPR-gG-EqH"/>
+                        <outlet property="seeAllPostsButton" destination="vtV-8B-xTM" id="ZVe-Fr-sXM"/>
+                        <outlet property="seeAllRecentFollowersButton" destination="FUE-GQ-QfW" id="bkA-iU-NTy"/>
                         <outlet property="statusView" destination="0k9-vg-LQb" id="n8W-H5-zhR"/>
                         <outlet property="userImage" destination="PGU-KQ-VjL" id="J6v-wg-Dbh"/>
                         <outlet property="userImageView" destination="qFS-11-SpF" id="ssY-mk-qfr"/>
