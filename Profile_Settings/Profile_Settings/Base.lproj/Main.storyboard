@@ -35,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zMT-fk-0Mk" userLabel="Profile View">
-                                <rect key="frame" x="0.0" y="170" width="414" height="726"/>
+                                <rect key="frame" x="0.0" y="170" width="414" height="750"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaY-Nc-47J" userLabel="NameCountry View">
                                         <rect key="frame" x="0.0" y="70" width="414" height="30"/>
@@ -184,15 +184,63 @@
                                             <constraint firstAttribute="bottom" secondItem="he9-RW-fUY" secondAttribute="bottom" id="t2p-ca-deg"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19X-Jm-75Q" userLabel="RecentPostsView">
+                                        <rect key="frame" x="15" y="200" width="384" height="263"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YR3-iJ-06E" userLabel="Recent Posts Label">
+                                                <rect key="frame" x="10" y="45" width="166" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9O-Qt-NpK" userLabel="See All Label">
+                                                <rect key="frame" x="253" y="45" width="122" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5QI-Ig-pyZ" userLabel="RecentFollowersView">
+                                        <rect key="frame" x="15" y="463" width="384" height="263"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-fq-rl7" userLabel="Recent Followers Label">
+                                                <rect key="frame" x="10" y="45" width="166" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gD-SG-cL0" userLabel="See All Label">
+                                                <rect key="frame" x="253" y="45" width="122" height="31"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="0k9-vg-LQb" firstAttribute="top" secondItem="TaY-Nc-47J" secondAttribute="bottom" id="1SZ-Bt-V4y"/>
                                     <constraint firstItem="0k9-vg-LQb" firstAttribute="leading" secondItem="zMT-fk-0Mk" secondAttribute="leading" constant="15" id="2DA-JB-Jxb"/>
                                     <constraint firstItem="TaY-Nc-47J" firstAttribute="centerX" secondItem="zMT-fk-0Mk" secondAttribute="centerX" id="I6m-60-0SJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="5QI-Ig-pyZ" secondAttribute="bottom" constant="24" id="KcV-3v-ljD"/>
+                                    <constraint firstAttribute="trailing" secondItem="5QI-Ig-pyZ" secondAttribute="trailing" constant="15" id="Kul-gD-KIx"/>
+                                    <constraint firstItem="5QI-Ig-pyZ" firstAttribute="top" secondItem="zMT-fk-0Mk" secondAttribute="top" constant="463" id="N1R-9j-ILh"/>
+                                    <constraint firstItem="5QI-Ig-pyZ" firstAttribute="leading" secondItem="zMT-fk-0Mk" secondAttribute="leading" constant="15" id="PKf-wI-DeN"/>
                                     <constraint firstAttribute="trailing" secondItem="0k9-vg-LQb" secondAttribute="trailing" constant="15" id="WiA-MF-CSY"/>
+                                    <constraint firstItem="19X-Jm-75Q" firstAttribute="top" secondItem="zMT-fk-0Mk" secondAttribute="top" constant="200" id="dwW-qt-PEs"/>
+                                    <constraint firstItem="19X-Jm-75Q" firstAttribute="leading" secondItem="zMT-fk-0Mk" secondAttribute="leading" constant="15" id="hik-ZS-1m5"/>
+                                    <constraint firstItem="5QI-Ig-pyZ" firstAttribute="top" secondItem="19X-Jm-75Q" secondAttribute="bottom" id="its-hS-AU8"/>
                                     <constraint firstItem="TaY-Nc-47J" firstAttribute="top" secondItem="zMT-fk-0Mk" secondAttribute="top" constant="70" id="jMh-Xy-NJS"/>
-                                    <constraint firstAttribute="bottom" secondItem="0k9-vg-LQb" secondAttribute="bottom" constant="526" id="kJH-b5-rrw"/>
+                                    <constraint firstItem="19X-Jm-75Q" firstAttribute="top" secondItem="0k9-vg-LQb" secondAttribute="bottom" id="rR8-Mn-Hid"/>
+                                    <constraint firstAttribute="trailing" secondItem="19X-Jm-75Q" secondAttribute="trailing" constant="15" id="vh8-49-HKi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFS-11-SpF" userLabel="User Image View">
@@ -217,7 +265,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zMT-fk-0Mk" firstAttribute="trailing" secondItem="TID-ze-IIr" secondAttribute="trailing" id="CPt-ev-jZ4"/>
-                            <constraint firstAttribute="bottom" secondItem="zMT-fk-0Mk" secondAttribute="bottom" id="LOd-IL-EXS"/>
+                            <constraint firstAttribute="bottom" secondItem="zMT-fk-0Mk" secondAttribute="bottom" constant="-24" id="LOd-IL-EXS"/>
                             <constraint firstItem="qFS-11-SpF" firstAttribute="centerX" secondItem="m5X-7f-CRc" secondAttribute="centerX" id="feg-fS-kij"/>
                             <constraint firstItem="zMT-fk-0Mk" firstAttribute="leading" secondItem="TID-ze-IIr" secondAttribute="leading" id="iaX-BU-TAM"/>
                             <constraint firstItem="qFS-11-SpF" firstAttribute="top" secondItem="TID-ze-IIr" secondAttribute="top" constant="32" id="inm-RT-8am"/>
@@ -239,6 +287,12 @@
                         <outlet property="postLabel" destination="C4L-yO-Dwz" id="CsZ-UL-Hhq"/>
                         <outlet property="postsView" destination="he9-RW-fUY" id="g2z-m9-aDI"/>
                         <outlet property="profileView" destination="zMT-fk-0Mk" id="aQm-w7-ll7"/>
+                        <outlet property="recentFollowersLabel" destination="TyQ-fq-rl7" id="ClC-hO-DFu"/>
+                        <outlet property="recentFollowersView" destination="5QI-Ig-pyZ" id="sbI-LT-KWU"/>
+                        <outlet property="recentPostsLabel" destination="YR3-iJ-06E" id="eRV-Uz-dax"/>
+                        <outlet property="recentPostsView" destination="19X-Jm-75Q" id="Qpl-cu-jxU"/>
+                        <outlet property="seeAllPostsLabel" destination="o9O-Qt-NpK" id="RdM-UQ-K3d"/>
+                        <outlet property="seeAllRecentFollowersLabel" destination="8gD-SG-cL0" id="fPR-gG-EqH"/>
                         <outlet property="statusView" destination="0k9-vg-LQb" id="n8W-H5-zhR"/>
                         <outlet property="userImage" destination="PGU-KQ-VjL" id="J6v-wg-Dbh"/>
                         <outlet property="userImageView" destination="qFS-11-SpF" id="ssY-mk-qfr"/>
@@ -246,7 +300,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVp-7F-Ea1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="94"/>
+            <point key="canvasLocation" x="1108.6956521739132" y="93.75"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="cWg-rE-ZdS">

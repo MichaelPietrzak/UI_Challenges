@@ -76,6 +76,7 @@ class SettingsViewController: UITableViewController {
             data = "Empty"
         }
         
+        // MARK: - Cell Data
         cell.textLabel?.text = data
         cell.textLabel?.textColor = whiteColor
         cell.textLabel?.font = UIFont(name: "Futura-Medium", size: 16)
