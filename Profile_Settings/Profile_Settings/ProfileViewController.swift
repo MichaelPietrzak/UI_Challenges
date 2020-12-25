@@ -9,6 +9,31 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    // MARK: - @IBOutlet
+    @IBOutlet var profileView: UIView!
+    
+    @IBOutlet var nameCountryView: UIView!
+    
+    @IBOutlet var userImageView: UIView!
+    @IBOutlet var userImage: UIImageView!
+    
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var countryLabel: UILabel!
+    
+    @IBOutlet var statusView: UIView!
+    
+    @IBOutlet var postsView: UIView!
+    @IBOutlet var postData: UILabel!
+    @IBOutlet var postLabel: UILabel!
+    
+    @IBOutlet var followingView: UIView!
+    @IBOutlet var followingData: UILabel!
+    @IBOutlet var followingLabel: UILabel!
+    
+    @IBOutlet var followersView: UIView!
+    @IBOutlet var followersData: UILabel!
+    @IBOutlet var followersLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,7 +60,6 @@ class ProfileViewController: UIViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
-        //navigationItem.rightBarButtonItem?.tintColor = whiteColor
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: whiteColor], for: .normal)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: whiteColor], for: .highlighted)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: whiteColor], for: .selected)
@@ -49,6 +73,7 @@ class ProfileViewController: UIViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
     }
     
+    // MARK: - UIBarButtonTap
     @objc func editTapped(sender: UIButton!) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let settingsVC = storyboard.instantiateViewController(withIdentifier: "settingsViewController") as! SettingsViewController
