@@ -47,6 +47,61 @@ class ProfileViewController: UIViewController {
         
         view.backgroundColor = darkColor
         
+        // MARK: - StatusView Data
+        profileView.backgroundColor = grayColor
+        profileView.layer.cornerRadius = 50
+        nameCountryView.backgroundColor = grayColor
+        
+        userImageView.layer.cornerRadius = 25
+        userImageView.layer.shadowColor = darkColor.cgColor
+        userImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+        userImageView.layer.shadowRadius = 25
+        userImageView.layer.shadowOpacity = 0.9
+        userImageView.layer.shouldRasterize = true
+        userImageView.layer.rasterizationScale = UIScreen.main.scale
+        
+        userImage.layer.cornerRadius = 25
+        userImage.clipsToBounds = true
+  
+        nameLabel.text = "Lori Schneider"
+        nameLabel.font = UIFont(name: "Futura-Bold", size: 22)
+        nameLabel.textAlignment = .center
+        nameLabel.textColor = whiteColor
+        
+        countryLabel.text = "London, UK"
+        countryLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        countryLabel.textAlignment = .center
+        countryLabel.textColor = whiteColor
+        
+        statusView.backgroundColor = grayColor
+        postsView.backgroundColor = grayColor
+        followingView.backgroundColor = grayColor
+        followersView.backgroundColor = grayColor
+        
+        postData.font = UIFont(name: "Futura-Medium", size: 16)
+        postData.textColor = greenColor
+        postData.text = "203"
+        
+        postLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        postLabel.textColor = whiteColor
+        postLabel.text = "Posts"
+            
+        followingData.font = UIFont(name: "Futura-Medium", size: 16)
+        followingData.textColor = greenColor
+        followingData.text = "125"
+            
+        followingLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        followingLabel.textColor = whiteColor
+        followingLabel.text = "Following"
+            
+        followersData.font = UIFont(name: "Futura-Medium", size: 16)
+        followersData.textColor = greenColor
+        followersData.text = "3501"
+                
+        followersLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        followersLabel.textColor = whiteColor
+        followersLabel.text = "Followers"
+        
         // MARK: - Navigation Bar
         self.navigationController?.navigationBar.tintColor = whiteColor
         self.navigationController?.navigationBar.barTintColor = darkColor
