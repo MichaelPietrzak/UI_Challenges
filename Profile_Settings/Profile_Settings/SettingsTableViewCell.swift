@@ -26,5 +26,19 @@ class SettingsTableViewCell: UITableViewCell {
         let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
      
         view.backgroundColor = grayColor
+        
+        // TODO: - icon img from code
+        //iconImage.image = UIImage(named: "globe")
+        //iconImage.tintColor = lightGrayColor
+        
+        iconLabel.text = "Language"
+        iconLabel.textAlignment = .left
+        iconLabel.textColor = lightGrayColor
+        iconLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        
+        actionLabel.text = "English"
+        actionLabel.textAlignment = .right
+        actionLabel.textColor = greenColor
+        actionLabel.font = UIFont(name: "Futura-Medium", size: 16)
     }
 }
