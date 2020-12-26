@@ -27,6 +27,9 @@ class SettingsViewController: UITableViewController {
         self.title = "Settings"
 
         view.backgroundColor = darkColor
+        
+        // MARK: - Registering Table Cell xib
+        tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
     }
     
     // MARK: - Table view data source
@@ -54,12 +57,13 @@ class SettingsViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView()
         headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-        headerView.backgroundColor = UIColor.red
+        //headerView.backgroundColor = UIColor.red
         return headerView
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "settingCell", for: indexPath)
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
 
         let section = indexPath.section
         
@@ -77,10 +81,10 @@ class SettingsViewController: UITableViewController {
         }
         
         // MARK: - Cell Data
-        cell.textLabel?.text = data
-        cell.textLabel?.textColor = lightGrayColor
-        cell.textLabel?.font = UIFont(name: "Futura-Medium", size: 16)
-        cell.backgroundColor = darkColor
+//        cell.textLabel?.text = data
+//        cell.textLabel?.textColor = lightGrayColor
+//        cell.textLabel?.font = UIFont(name: "Futura-Medium", size: 16)
+//        cell.backgroundColor = darkColor
         
         return cell
     }
