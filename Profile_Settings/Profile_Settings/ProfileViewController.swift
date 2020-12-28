@@ -37,6 +37,9 @@ class ProfileViewController: UIViewController {
     @IBOutlet var recentPostsView: UIView!
     @IBOutlet var recentFollowersView: UIView!
     
+    @IBOutlet var postsCollectionView: UIView!
+    @IBOutlet var followersCollectionView: UIView!
+    
     @IBOutlet var recentPostsLabel: UILabel!
     @IBOutlet var seeAllPostsButton: UIButton!
     @IBOutlet var recentFollowersLabel: UILabel!
@@ -52,6 +55,8 @@ class ProfileViewController: UIViewController {
         let lightGrayColor = UIColor(red: 0.61, green: 0.64, blue: 0.64, alpha: 1.00)
         let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
         let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
+        
+        let placeholderColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1.00)
         
         view.backgroundColor = darkColor
         
@@ -113,6 +118,12 @@ class ProfileViewController: UIViewController {
         recentPostsView.backgroundColor = grayColor
         recentFollowersView.backgroundColor = grayColor
         
+        postsCollectionView.backgroundColor = placeholderColor
+        postsCollectionView.layer.cornerRadius = 10
+        
+        followersCollectionView.backgroundColor = placeholderColor
+        followersCollectionView.layer.cornerRadius = 10
+                
         recentPostsLabel.text = "Recent Posts"
         recentPostsLabel.textAlignment = .left
         recentPostsLabel.textColor = lightGrayColor
