@@ -54,12 +54,12 @@ class SettingsViewController: UITableViewController {
 //        return "\(sections[section])"
 //    }
     
-    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = UIView()
-        headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-        //headerView.backgroundColor = UIColor.red
-        return headerView
-    }
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
+//        //headerView.backgroundColor = UIColor.red
+//        return headerView
+//    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -67,7 +67,7 @@ class SettingsViewController: UITableViewController {
 
         let section = indexPath.section
         
-        var data: String
+        let data: String
         
         switch section {
         case 0:
@@ -81,10 +81,8 @@ class SettingsViewController: UITableViewController {
         }
         
         // MARK: - Cell Data
-//        cell.textLabel?.text = data
-//        cell.textLabel?.textColor = lightGrayColor
-//        cell.textLabel?.font = UIFont(name: "Futura-Medium", size: 16)
-//        cell.backgroundColor = darkColor
+        cell.backgroundColor = darkColor
+//      cell.textLabel?.text = data
         
         return cell
     }

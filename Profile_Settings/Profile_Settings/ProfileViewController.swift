@@ -73,6 +73,7 @@ class ProfileViewController: UIViewController {
         userImageView.layer.shouldRasterize = true
         userImageView.layer.rasterizationScale = UIScreen.main.scale
         
+        userImage.image = UIImage(named: "userAvatar")
         userImage.layer.cornerRadius = 25
         userImage.clipsToBounds = true
   
