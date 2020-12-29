@@ -123,7 +123,7 @@ class ProfileViewController: UIViewController {
         
         followersCollectionView.backgroundColor = placeholderColor
         followersCollectionView.layer.cornerRadius = 10
-                
+    
         recentPostsLabel.text = "Recent Posts"
         recentPostsLabel.textAlignment = .left
         recentPostsLabel.textColor = lightGrayColor
