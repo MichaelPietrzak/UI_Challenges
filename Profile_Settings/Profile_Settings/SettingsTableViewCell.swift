@@ -31,11 +31,11 @@ class SettingsTableViewCell: UITableViewCell {
         iconImage.image = UIImage(systemName: "globe", withConfiguration: iconConfiguration)
         iconImage.tintColor = lightGrayColor
         
-        iconLabel.text = "Language"
         iconLabel.textAlignment = .left
         iconLabel.textColor = lightGrayColor
         iconLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
+        // TODO: - change actionLabel to actionButton(in xib also)
         actionLabel.text = "English"
         actionLabel.textAlignment = .right
         actionLabel.textColor = greenColor

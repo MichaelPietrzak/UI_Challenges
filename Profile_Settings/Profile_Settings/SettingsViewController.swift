@@ -9,6 +9,23 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
 
+    // MARK: - Settings model
+    enum SettingsType {
+        case main
+        case notification
+        case permissions
+    }
+    
+    struct Settings {
+        var iconImage: UIImage
+        var iconLabel: String
+        
+        init(iconImage: UIImage, iconLabel: String) {
+            self.iconImage = iconImage
+            self.iconLabel = iconLabel
+        }
+    }
+    
     // MARK: - Data source from Array
     var sections = ["", "Notifications", "App Permissions"]
     var mainSettings = ["Language", "Application Theme"]
@@ -28,8 +45,14 @@ class SettingsViewController: UITableViewController {
 
         view.backgroundColor = darkColor
         
+        tableView.separatorStyle = .none
+        
         // MARK: - Registering Table Cell xib
-        tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "SettingsTableViewCell")
+        func registerCell() {
+            let mainCell = UINib(nibName: "SettingsTableViewCell", bundle: nil)
+            
+            tableView.register(mainCell, forCellReuseIdentifier: "SettingsTableViewCell")
+        }
     }
     
     // MARK: - Table view data source
@@ -38,28 +61,33 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return mainSettings.count
-        }
-        if section == 1 {
-            return notifications.count
-        }
-        if section == 2 {
-            return appPermissions.count
-        }
-        return 0
+//        if section == 0 {
+//            return mainSettings.count
+//        }
+//        if section == 1 {
+//            return notifications.count
+//        }
+//        if section == 2 {
+//            return appPermissions.count
+//        }
+        
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
     }
     
 //    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 //        return "\(sections[section])"
 //    }
     
-//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView()
-//        headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
-//        //headerView.backgroundColor = UIColor.red
-//        return headerView
-//    }
+    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView()
+        headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
+        //headerView.backgroundColor = UIColor.red
+        return headerView
+    }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
@@ -82,7 +110,7 @@ class SettingsViewController: UITableViewController {
         
         // MARK: - Cell Data
         cell.backgroundColor = darkColor
-//      cell.textLabel?.text = data
+        cell.iconLabel.text = data
         
         return cell
     }
