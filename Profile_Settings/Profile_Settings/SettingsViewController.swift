@@ -8,23 +8,6 @@
 import UIKit
 
 class SettingsViewController: UITableViewController {
-
-    // MARK: - Settings model
-    enum SettingsType {
-        case main
-        case notification
-        case permissions
-    }
-    
-    struct Settings {
-        var iconImage: UIImage
-        var iconLabel: String
-        
-        init(iconImage: UIImage, iconLabel: String) {
-            self.iconImage = iconImage
-            self.iconLabel = iconLabel
-        }
-    }
     
     // MARK: - Data source from Array
     var sections = ["", "Notifications", "App Permissions"]
@@ -38,6 +21,10 @@ class SettingsViewController: UITableViewController {
     let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
     let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
     
+    struct Cells {
+        static let settingsCell = "SettingsTableViewCell"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,11 +35,7 @@ class SettingsViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         // MARK: - Registering Table Cell xib
-        func registerCell() {
-            let mainCell = UINib(nibName: "SettingsTableViewCell", bundle: nil)
-            
-            tableView.register(mainCell, forCellReuseIdentifier: "SettingsTableViewCell")
-        }
+        tableView.register(UINib(nibName: Cells.settingsCell, bundle: nil), forCellReuseIdentifier: Cells.settingsCell)
     }
     
     // MARK: - Table view data source
@@ -70,7 +53,6 @@ class SettingsViewController: UITableViewController {
 //        if section == 2 {
 //            return appPermissions.count
 //        }
-        
         return 1
     }
     
@@ -91,7 +73,7 @@ class SettingsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SettingsTableViewCell", for: indexPath) as! SettingsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.settingsCell, for: indexPath) as! SettingsTableViewCell
 
         let section = indexPath.section
         
@@ -111,7 +93,6 @@ class SettingsViewController: UITableViewController {
         // MARK: - Cell Data
         cell.backgroundColor = darkColor
         cell.iconLabel.text = data
-        
         return cell
     }
 }
