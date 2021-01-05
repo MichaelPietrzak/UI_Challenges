@@ -13,7 +13,9 @@ struct Settings {
 }
 
 struct Images {
-     static let globe = "globe"
+    static let globe         = "globe"
+    static let hamburgerMenu = "text.alignleft"
+    static let back          = "chevron.backward"
 }
 
 class SettingsViewController: UITableViewController {
