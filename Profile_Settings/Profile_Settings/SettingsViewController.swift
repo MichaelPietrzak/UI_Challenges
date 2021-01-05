@@ -7,6 +7,15 @@
 
 import UIKit
 
+struct Settings {
+    let iconImage: UIImage
+    let iconLabel: String
+}
+
+struct Images {
+     static let globe = "globe"
+}
+
 class SettingsViewController: UITableViewController {
     
     // MARK: - Data source from Array

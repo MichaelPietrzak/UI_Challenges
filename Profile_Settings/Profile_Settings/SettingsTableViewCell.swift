@@ -26,9 +26,7 @@ class SettingsTableViewCell: UITableViewCell {
         view.backgroundColor = grayColor
         view.layer.cornerRadius = 20
         
-        let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 24, weight: .light)
-        
-        iconImage.image = UIImage(systemName: "globe", withConfiguration: iconConfiguration)
+        iconImage.image = UIImage.iconConfig(imageName: Images.globe, pointSize: 24, weight: .light)
         iconImage.tintColor = lightGrayColor
         
         iconLabel.textAlignment = .left
@@ -41,4 +39,11 @@ class SettingsTableViewCell: UITableViewCell {
         actionLabel.textColor = greenColor
         actionLabel.font = UIFont(name: "Futura-Medium", size: 14)
     }
+}
+
+extension UIImage {
+    class func iconConfig(imageName: String, pointSize: CGFloat, weight: UIImage.SymbolWeight) -> UIImage {
+            let image = UIImage(systemName: imageName, withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize, weight: weight))
+            return image!
+        }
 }
