@@ -40,23 +40,15 @@ class ProfileViewController: UIViewController {
         
         self.title = "Profile"
         
-        // MARK: - Color Palette
-        let darkColor = UIColor(red: 0.04, green: 0.04, blue: 0.04, alpha: 1.00)
-        let lightGrayColor = UIColor(red: 0.61, green: 0.64, blue: 0.64, alpha: 1.00)
-        let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
-        let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
-        
-        let placeholderColor = UIColor(red: 0.92, green: 0.92, blue: 0.92, alpha: 1.00)
-        
-        view.backgroundColor = darkColor
+        view.backgroundColor = Colors.darkColor
         
         // MARK: - Profile View Data
-        profileView.backgroundColor = grayColor
+        profileView.backgroundColor = Colors.grayColor
         profileView.layer.cornerRadius = 50
-        nameCountryView.backgroundColor = grayColor
+        nameCountryView.backgroundColor = Colors.grayColor
         
         userImageView.layer.cornerRadius = 25
-        userImageView.layer.shadowColor = darkColor.cgColor
+        userImageView.layer.shadowColor = Colors.darkColor.cgColor
         userImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         userImageView.layer.shadowRadius = 25
         userImageView.layer.shadowOpacity = 0.9
@@ -69,91 +61,91 @@ class ProfileViewController: UIViewController {
   
         nameLabel.text = "Lori Schneider"
         nameLabel.textAlignment = .center
-        nameLabel.textColor = lightGrayColor
+        nameLabel.textColor = Colors.lightGrayColor
         nameLabel.font = UIFont(name: "Futura-Bold", size: 22)
         
         countryLabel.text = "London, UK"
         countryLabel.textAlignment = .center
-        countryLabel.textColor = lightGrayColor
+        countryLabel.textColor = Colors.lightGrayColor
         countryLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
-        statusView.backgroundColor = grayColor
-        postsView.backgroundColor = grayColor
-        followingView.backgroundColor = grayColor
-        followersView.backgroundColor = grayColor
+        statusView.backgroundColor = Colors.grayColor
+        postsView.backgroundColor = Colors.grayColor
+        followingView.backgroundColor = Colors.grayColor
+        followersView.backgroundColor = Colors.grayColor
         
         postData.text = "203"
-        postData.textColor = greenColor
+        postData.textColor = Colors.greenColor
         postData.font = UIFont(name: "Futura-Medium", size: 16)
         
         postLabel.text = "Posts"
-        postLabel.textColor = lightGrayColor
+        postLabel.textColor = Colors.lightGrayColor
         postLabel.font = UIFont(name: "Futura-Medium", size: 14)
             
         followingData.text = "125"
-        followingData.textColor = greenColor
+        followingData.textColor = Colors.greenColor
         followingData.font = UIFont(name: "Futura-Medium", size: 16)
             
         followingLabel.text = "Following"
-        followingLabel.textColor = lightGrayColor
+        followingLabel.textColor = Colors.lightGrayColor
         followingLabel.font = UIFont(name: "Futura-Medium", size: 14)
             
         followersData.text = "3501"
-        followersData.textColor = greenColor
+        followersData.textColor = Colors.greenColor
         followersData.font = UIFont(name: "Futura-Medium", size: 16)
                 
         followersLabel.text = "Followers"
-        followersLabel.textColor = lightGrayColor
+        followersLabel.textColor = Colors.lightGrayColor
         followersLabel.font = UIFont(name: "Futura-Medium", size: 14)
         
-        recentPostsView.backgroundColor = grayColor
-        recentFollowersView.backgroundColor = grayColor
+        recentPostsView.backgroundColor = Colors.grayColor
+        recentFollowersView.backgroundColor = Colors.grayColor
         
-        postsCollectionView.backgroundColor = placeholderColor
+        postsCollectionView.backgroundColor = Colors.placeholderColor
         postsCollectionView.layer.cornerRadius = 10
         
-        followersCollectionView.backgroundColor = placeholderColor
+        followersCollectionView.backgroundColor = Colors.placeholderColor
         followersCollectionView.layer.cornerRadius = 10
     
         recentPostsLabel.text = "Recent Posts"
         recentPostsLabel.textAlignment = .left
-        recentPostsLabel.textColor = lightGrayColor
+        recentPostsLabel.textColor = Colors.lightGrayColor
         recentPostsLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
         seeAllPostsButton.setTitle("See All", for: .normal)
         seeAllPostsButton.contentHorizontalAlignment = .right
-        seeAllPostsButton.setTitleColor(greenColor, for: .normal)
+        seeAllPostsButton.setTitleColor(Colors.greenColor, for: .normal)
         seeAllPostsButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 14)
         
         recentFollowersLabel.text = "Recent Followers"
         recentFollowersLabel.textAlignment = .left
-        recentFollowersLabel.textColor = lightGrayColor
+        recentFollowersLabel.textColor = Colors.lightGrayColor
         recentFollowersLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
         seeAllRecentFollowersButton.setTitle("See All", for: .normal)
         seeAllRecentFollowersButton.contentHorizontalAlignment = .right
-        seeAllRecentFollowersButton.setTitleColor(greenColor, for: .normal)
+        seeAllRecentFollowersButton.setTitleColor(Colors.greenColor, for: .normal)
         seeAllRecentFollowersButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 14)
         
         // MARK: - Navigation Bar
-        self.navigationController?.navigationBar.tintColor = lightGrayColor
-        self.navigationController?.navigationBar.barTintColor = darkColor
+        self.navigationController?.navigationBar.tintColor = Colors.lightGrayColor
+        self.navigationController?.navigationBar.barTintColor = Colors.darkColor
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: lightGrayColor, NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.lightGrayColor, NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!]
         
         let menuButtonImage = UIImage.iconConfig(imageName: Images.hamburgerMenu, pointSize: 20, weight: .black)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: lightGrayColor], for: .normal)
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: lightGrayColor], for: .highlighted)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .highlighted)
         
         let backButtonImage = UIImage.iconConfig(imageName: Images.back, pointSize: 20, weight: .black)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        navigationItem.backBarButtonItem?.tintColor = lightGrayColor
+        navigationItem.backBarButtonItem?.tintColor = Colors.lightGrayColor
         
         self.navigationController?.navigationBar.backIndicatorImage = backButtonImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage

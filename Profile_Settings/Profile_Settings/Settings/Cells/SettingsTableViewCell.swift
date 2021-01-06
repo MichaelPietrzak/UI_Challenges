@@ -21,26 +21,21 @@ class SettingsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        // MARK: - Color Palette
-        let lightGrayColor = UIColor(red: 0.61, green: 0.64, blue: 0.64, alpha: 1.00)
-        let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
-        let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
      
-        view.backgroundColor = grayColor
+        view.backgroundColor = Colors.grayColor
         view.layer.cornerRadius = 20
         
         iconImage.image = UIImage.iconConfig(imageName: Images.globe, pointSize: 24, weight: .light)
-        iconImage.tintColor = lightGrayColor
+        iconImage.tintColor = Colors.lightGrayColor
         
         iconLabel.textAlignment = .left
-        iconLabel.textColor = lightGrayColor
+        iconLabel.textColor = Colors.lightGrayColor
         iconLabel.font = UIFont(name: "Futura-Medium", size: 16)
         
         // TODO: - change actionLabel to actionButton(in xib also)
         actionLabel.text = "English"
         actionLabel.textAlignment = .right
-        actionLabel.textColor = greenColor
+        actionLabel.textColor = Colors.greenColor
         actionLabel.font = UIFont(name: "Futura-Medium", size: 14)
     }
 }

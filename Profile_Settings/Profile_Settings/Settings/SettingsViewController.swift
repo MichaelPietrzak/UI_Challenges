@@ -26,12 +26,6 @@ class SettingsViewController: UITableViewController {
     var notifications = ["Push Notifications", "Email Notifications"]
     var appPermissions = ["Camera", "Location"]
     
-    // MARK: - Color Palette
-    let darkColor = UIColor(red: 0.04, green: 0.04, blue: 0.04, alpha: 1.00)
-    let lightGrayColor = UIColor(red: 0.61, green: 0.64, blue: 0.64, alpha: 1.00)
-    let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
-    let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
-    
 //    struct Cells {
 //        static let settingsCell = "SettingsTableViewCell"
 //    }
@@ -41,7 +35,7 @@ class SettingsViewController: UITableViewController {
         
         self.title = "Settings"
 
-        view.backgroundColor = darkColor
+        view.backgroundColor = Colors.darkColor
         
         tableView.separatorStyle = .none
         
@@ -102,7 +96,7 @@ class SettingsViewController: UITableViewController {
         }
         
         // MARK: - Cell Data
-        cell.backgroundColor = darkColor
+        cell.backgroundColor = Colors.darkColor
         cell.iconLabel.text = data
         return cell
     }
