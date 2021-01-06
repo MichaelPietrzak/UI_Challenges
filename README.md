@@ -11,11 +11,7 @@ Various UI challenges created in Swift.
 
 [**Link for Code**](https://github.com/MichaelPietrzak/UI_Challenges/tree/master/Profile_Settings)
 
-<br />
-
 ### Credits
-
-<br />
 
 Dribble Design - Profile & Settings - Dark Mode\
 By Hend Elgohary
