@@ -14,6 +14,10 @@ struct Settings {
 
 class SettingsViewController: UITableViewController {
     
+    override class func description() -> String {
+        return "SettingsViewController"
+    }
+    
     // MARK: - Data source from Array
     var sections = ["", "Notifications", "App Permissions"]
     var mainSettings = ["Language", "Application Theme"]

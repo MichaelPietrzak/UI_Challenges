@@ -9,6 +9,10 @@ import UIKit
 
 class ProfileViewController: UIViewController {
 
+    override class func description() -> String {
+        return "ProfileViewController"
+    }
+    
     // MARK: - @IBOutlet
     @IBOutlet var profileView: UIView!
     @IBOutlet var nameCountryView: UIView!
