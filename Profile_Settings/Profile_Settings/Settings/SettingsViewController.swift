@@ -12,12 +12,6 @@ struct Settings {
     let iconLabel: String
 }
 
-struct Images {
-    static let globe         = "globe"
-    static let hamburgerMenu = "text.alignleft"
-    static let back          = "chevron.backward"
-}
-
 class SettingsViewController: UITableViewController {
     
     // MARK: - Data source from Array
@@ -34,11 +28,9 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         
         self.title = "Settings"
-
         view.backgroundColor = Colors.darkColor
         
         tableView.separatorStyle = .none
-        
         // MARK: - Registering Table Cell xib
         tableView.register(UINib(nibName: SettingsTableViewCell.description(), bundle: nil), forCellReuseIdentifier: SettingsTableViewCell.description())
     }

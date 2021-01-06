@@ -25,7 +25,7 @@ class SettingsTableViewCell: UITableViewCell {
         view.backgroundColor = Colors.grayColor
         view.layer.cornerRadius = 20
         
-        iconImage.image = UIImage.iconConfig(imageName: Images.globe, pointSize: 24, weight: .light)
+        iconImage.image = UIImage.iconConfig(imageName: Icons.globe, pointSize: 24, weight: .light)
         iconImage.tintColor = Colors.lightGrayColor
         
         iconLabel.textAlignment = .left

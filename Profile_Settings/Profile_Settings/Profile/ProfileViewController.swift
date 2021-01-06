@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController {
         userImageView.layer.shouldRasterize = true
         userImageView.layer.rasterizationScale = UIScreen.main.scale
         
-        userImage.image = UIImage(named: "userAvatar")
+        userImage.image = Images.userAvatar
         userImage.layer.cornerRadius = 25
         userImage.clipsToBounds = true
   
@@ -134,7 +134,7 @@ class ProfileViewController: UIViewController {
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.lightGrayColor, NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!]
         
-        let menuButtonImage = UIImage.iconConfig(imageName: Images.hamburgerMenu, pointSize: 20, weight: .black)
+        let menuButtonImage = UIImage.iconConfig(imageName: Icons.hamburgerMenu, pointSize: 20, weight: .black)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: nil, action: nil)
         
@@ -142,7 +142,7 @@ class ProfileViewController: UIViewController {
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .normal)
         navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .highlighted)
         
-        let backButtonImage = UIImage.iconConfig(imageName: Images.back, pointSize: 20, weight: .black)
+        let backButtonImage = UIImage.iconConfig(imageName: Icons.back, pointSize: 20, weight: .black)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = Colors.lightGrayColor
