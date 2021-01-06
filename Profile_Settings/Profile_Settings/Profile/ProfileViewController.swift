@@ -11,35 +11,25 @@ class ProfileViewController: UIViewController {
 
     // MARK: - @IBOutlet
     @IBOutlet var profileView: UIView!
-    
     @IBOutlet var nameCountryView: UIView!
-    
     @IBOutlet var userImageView: UIView!
     @IBOutlet var userImage: UIImageView!
-    
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
-    
     @IBOutlet var statusView: UIView!
-    
     @IBOutlet var postsView: UIView!
     @IBOutlet var postData: UILabel!
     @IBOutlet var postLabel: UILabel!
-
     @IBOutlet var followingView: UIView!
     @IBOutlet var followingData: UILabel!
     @IBOutlet var followingLabel: UILabel!
-    
     @IBOutlet var followersView: UIView!
     @IBOutlet var followersData: UILabel!
     @IBOutlet var followersLabel: UILabel!
-    
     @IBOutlet var recentPostsView: UIView!
     @IBOutlet var recentFollowersView: UIView!
-    
     @IBOutlet var postsCollectionView: UIView!
     @IBOutlet var followersCollectionView: UIView!
-    
     @IBOutlet var recentPostsLabel: UILabel!
     @IBOutlet var seeAllPostsButton: UIButton!
     @IBOutlet var recentFollowersLabel: UILabel!

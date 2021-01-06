@@ -9,6 +9,10 @@ import UIKit
 
 class SettingsTableViewCell: UITableViewCell {
     
+    override class func description() -> String {
+        return "SettingsTableViewCell"
+    }
+    
     /// make sure you're setting class for the view instead of File's Owner
     @IBOutlet var view: UIView!
     @IBOutlet var iconImage: UIImageView!
@@ -39,11 +43,4 @@ class SettingsTableViewCell: UITableViewCell {
         actionLabel.textColor = greenColor
         actionLabel.font = UIFont(name: "Futura-Medium", size: 14)
     }
-}
-
-extension UIImage {
-    class func iconConfig(imageName: String, pointSize: CGFloat, weight: UIImage.SymbolWeight) -> UIImage {
-            let image = UIImage(systemName: imageName, withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize, weight: weight))
-            return image!
-        }
 }

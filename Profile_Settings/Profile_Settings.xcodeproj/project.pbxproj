@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		4C69B1C425977E970044AFB0 /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C69B1C225977E970044AFB0 /* SettingsTableViewCell.swift */; };
 		4C69B1C525977E970044AFB0 /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C69B1C325977E970044AFB0 /* SettingsTableViewCell.xib */; };
-		4CDAC09925A6246900821C17 /* ImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAC09825A6246900821C17 /* ImageExtensions.swift */; };
+		4CDAC09925A6246900821C17 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDAC09825A6246900821C17 /* ViewExtensions.swift */; };
 		4CFBD0392594C390001EAA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBD0382594C390001EAA23 /* AppDelegate.swift */; };
 		4CFBD03B2594C390001EAA23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CFBD03A2594C390001EAA23 /* SceneDelegate.swift */; };
 		4CFBD0402594C390001EAA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CFBD03E2594C390001EAA23 /* Main.storyboard */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		4C69B1C225977E970044AFB0 /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
 		4C69B1C325977E970044AFB0 /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
-		4CDAC09825A6246900821C17 /* ImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExtensions.swift; sourceTree = "<group>"; };
+		4CDAC09825A6246900821C17 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		4CFBD0352594C390001EAA23 /* Profile_Settings.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Profile_Settings.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CFBD0382594C390001EAA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4CFBD03A2594C390001EAA23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -48,9 +48,35 @@
 		4CDAC09725A623EE00821C17 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				4CDAC09825A6246900821C17 /* ImageExtensions.swift */,
+				4CDAC09825A6246900821C17 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4CDAC0A125A651A700821C17 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				4CFBD0502594F863001EAA23 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		4CDAC0A225A651BD00821C17 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				4CDAC0A325A651E900821C17 /* Cells */,
+				4CFBD0532594F88B001EAA23 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		4CDAC0A325A651E900821C17 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				4C69B1C225977E970044AFB0 /* SettingsTableViewCell.swift */,
+				4C69B1C325977E970044AFB0 /* SettingsTableViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		4CFBD02C2594C390001EAA23 = {
@@ -73,12 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				4CDAC09725A623EE00821C17 /* Extensions */,
+				4CDAC0A125A651A700821C17 /* Profile */,
+				4CDAC0A225A651BD00821C17 /* Settings */,
 				4CFBD0382594C390001EAA23 /* AppDelegate.swift */,
 				4CFBD03A2594C390001EAA23 /* SceneDelegate.swift */,
-				4CFBD0502594F863001EAA23 /* ProfileViewController.swift */,
-				4CFBD0532594F88B001EAA23 /* SettingsViewController.swift */,
-				4C69B1C225977E970044AFB0 /* SettingsTableViewCell.swift */,
-				4C69B1C325977E970044AFB0 /* SettingsTableViewCell.xib */,
 				4CFBD03E2594C390001EAA23 /* Main.storyboard */,
 				4CFBD0412594C393001EAA23 /* Assets.xcassets */,
 				4CFBD0432594C393001EAA23 /* LaunchScreen.storyboard */,
@@ -161,7 +185,7 @@
 				4CFBD0512594F863001EAA23 /* ProfileViewController.swift in Sources */,
 				4CFBD0392594C390001EAA23 /* AppDelegate.swift in Sources */,
 				4CFBD03B2594C390001EAA23 /* SceneDelegate.swift in Sources */,
-				4CDAC09925A6246900821C17 /* ImageExtensions.swift in Sources */,
+				4CDAC09925A6246900821C17 /* ViewExtensions.swift in Sources */,
 				4C69B1C425977E970044AFB0 /* SettingsTableViewCell.swift in Sources */,
 				4CFBD0542594F88B001EAA23 /* SettingsViewController.swift in Sources */,
 			);

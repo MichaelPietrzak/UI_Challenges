@@ -32,9 +32,9 @@ class SettingsViewController: UITableViewController {
     let grayColor = UIColor(red: 0.21, green: 0.21, blue: 0.21, alpha: 1.00)
     let greenColor = UIColor(red: 0.34, green: 0.58, blue: 0.46, alpha: 1.00)
     
-    struct Cells {
-        static let settingsCell = "SettingsTableViewCell"
-    }
+//    struct Cells {
+//        static let settingsCell = "SettingsTableViewCell"
+//    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +46,7 @@ class SettingsViewController: UITableViewController {
         tableView.separatorStyle = .none
         
         // MARK: - Registering Table Cell xib
-        tableView.register(UINib(nibName: Cells.settingsCell, bundle: nil), forCellReuseIdentifier: Cells.settingsCell)
+        tableView.register(UINib(nibName: SettingsTableViewCell.description(), bundle: nil), forCellReuseIdentifier: SettingsTableViewCell.description())
     }
     
     // MARK: - Table view data source
@@ -84,7 +84,7 @@ class SettingsViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Cells.settingsCell, for: indexPath) as! SettingsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.description(), for: indexPath) as! SettingsTableViewCell
 
         let section = indexPath.section
         
