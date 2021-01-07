@@ -9,15 +9,14 @@ import UIKit
 
 extension UIImage {
     /// configuring SF Symbol: name, pointSize and weight
-    class func iconConfig(imageName: String, pointSize: CGFloat, weight: UIImage.SymbolWeight) -> UIImage {
-        let image = UIImage(systemName: imageName, withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize, weight: weight))
-        return image!
+    class func iconConfig(_ imageName: String, _ pointSize: CGFloat, _ weight: UIImage.SymbolWeight) -> UIImage {
+        return UIImage(systemName: imageName, withConfiguration: UIImage.SymbolConfiguration(pointSize: pointSize, weight: weight))!
     }
 }
 
 extension UIFont {
-    func fontConfig(name: String, size: CGFloat) -> UIFont {
-        let font = UIFont(name: name, size: size)
-        return font!
+    class func fontConfig(_ name: String, _ size: CGFloat) -> UIFont {
+        return UIFont(name: name, size: size)!
     }
 }
+

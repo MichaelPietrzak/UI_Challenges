@@ -43,7 +43,6 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Profile"
-        
         view.backgroundColor = Colors.darkColor
         
         // MARK: - Profile View Data
@@ -66,12 +65,12 @@ class ProfileViewController: UIViewController {
         nameLabel.text = "Lori Schneider"
         nameLabel.textAlignment = .center
         nameLabel.textColor = Colors.lightGrayColor
-        nameLabel.font = UIFont(name: "Futura-Bold", size: 22)
-        
+        nameLabel.font = UIFont.fontConfig(Fonts.FuturaBold, 22)
+
         countryLabel.text = "London, UK"
         countryLabel.textAlignment = .center
         countryLabel.textColor = Colors.lightGrayColor
-        countryLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        countryLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
         
         statusView.backgroundColor = Colors.grayColor
         postsView.backgroundColor = Colors.grayColor
@@ -80,27 +79,27 @@ class ProfileViewController: UIViewController {
         
         postData.text = "203"
         postData.textColor = Colors.greenColor
-        postData.font = UIFont(name: "Futura-Medium", size: 16)
+        postData.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)     
         
         postLabel.text = "Posts"
         postLabel.textColor = Colors.lightGrayColor
-        postLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        postLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
             
         followingData.text = "125"
         followingData.textColor = Colors.greenColor
-        followingData.font = UIFont(name: "Futura-Medium", size: 16)
+        followingData.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
             
         followingLabel.text = "Following"
         followingLabel.textColor = Colors.lightGrayColor
-        followingLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        followingLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
             
         followersData.text = "3501"
         followersData.textColor = Colors.greenColor
-        followersData.font = UIFont(name: "Futura-Medium", size: 16)
+        followersData.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
                 
         followersLabel.text = "Followers"
         followersLabel.textColor = Colors.lightGrayColor
-        followersLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        followersLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
         
         recentPostsView.backgroundColor = Colors.grayColor
         recentFollowersView.backgroundColor = Colors.grayColor
@@ -114,39 +113,39 @@ class ProfileViewController: UIViewController {
         recentPostsLabel.text = "Recent Posts"
         recentPostsLabel.textAlignment = .left
         recentPostsLabel.textColor = Colors.lightGrayColor
-        recentPostsLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        recentPostsLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
         
         seeAllPostsButton.setTitle("See All", for: .normal)
         seeAllPostsButton.contentHorizontalAlignment = .right
         seeAllPostsButton.setTitleColor(Colors.greenColor, for: .normal)
-        seeAllPostsButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 14)
+        seeAllPostsButton.titleLabel?.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
         
         recentFollowersLabel.text = "Recent Followers"
         recentFollowersLabel.textAlignment = .left
         recentFollowersLabel.textColor = Colors.lightGrayColor
-        recentFollowersLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        recentFollowersLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
         
         seeAllRecentFollowersButton.setTitle("See All", for: .normal)
         seeAllRecentFollowersButton.contentHorizontalAlignment = .right
         seeAllRecentFollowersButton.setTitleColor(Colors.greenColor, for: .normal)
-        seeAllRecentFollowersButton.titleLabel?.font = UIFont(name: "Futura-Medium", size: 14)
+        seeAllRecentFollowersButton.titleLabel?.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
         
         // MARK: - Navigation Bar
         self.navigationController?.navigationBar.tintColor = Colors.lightGrayColor
         self.navigationController?.navigationBar.barTintColor = Colors.darkColor
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.lightGrayColor, NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!]
-        
-        let menuButtonImage = UIImage.iconConfig(imageName: Icons.hamburgerMenu, pointSize: 20, weight: .black)
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: Colors.lightGrayColor, NSAttributedString.Key.font: UIFont.fontConfig(Fonts.FuturaBold, 20)]
+    
+        let menuButtonImage = UIImage.iconConfig(Icons.hamburgerMenu, 20, .black)
         
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: menuButtonImage, style: .plain, target: nil, action: nil)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editTapped))
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .normal)
-        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont(name: "Futura-Bold", size: 20)!, NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .highlighted)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.fontConfig(Fonts.FuturaBold, 20), NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .normal)
+        navigationItem.rightBarButtonItem?.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.fontConfig(Fonts.FuturaBold, 20), NSAttributedString.Key.foregroundColor: Colors.lightGrayColor], for: .highlighted)
         
-        let backButtonImage = UIImage.iconConfig(imageName: Icons.back, pointSize: 20, weight: .black)
+        let backButtonImage = UIImage.iconConfig(Icons.back, 20, .black)
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem?.tintColor = Colors.lightGrayColor

@@ -25,17 +25,17 @@ class SettingsTableViewCell: UITableViewCell {
         view.backgroundColor = Colors.grayColor
         view.layer.cornerRadius = 20
         
-        iconImage.image = UIImage.iconConfig(imageName: Icons.globe, pointSize: 24, weight: .light)
+        iconImage.image = UIImage.iconConfig(Icons.globe, 24, .light)
         iconImage.tintColor = Colors.lightGrayColor
         
         iconLabel.textAlignment = .left
         iconLabel.textColor = Colors.lightGrayColor
-        iconLabel.font = UIFont(name: "Futura-Medium", size: 16)
+        iconLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
         
         // TODO: - change actionLabel to actionButton(in xib also)
         actionLabel.text = "English"
         actionLabel.textAlignment = .right
         actionLabel.textColor = Colors.greenColor
-        actionLabel.font = UIFont(name: "Futura-Medium", size: 14)
+        actionLabel.font = UIFont.fontConfig(Fonts.FuturaMedium, 14)
     }
 }
