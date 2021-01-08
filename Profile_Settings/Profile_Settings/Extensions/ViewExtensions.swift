@@ -15,6 +15,7 @@ extension UIImage {
 }
 
 extension UIFont {
+    /// cofiguring custom UIFont: name, size
     class func fontConfig(_ name: String, _ size: CGFloat) -> UIFont {
         return UIFont(name: name, size: size)!
     }

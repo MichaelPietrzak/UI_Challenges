@@ -24,19 +24,18 @@ class SettingsViewController: UITableViewController {
     var notifications = ["Push Notifications", "Email Notifications"]
     var appPermissions = ["Camera", "Location"]
     
-//    struct Cells {
-//        static let settingsCell = "SettingsTableViewCell"
-//    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
         
-        self.title = "Settings"
-        view.backgroundColor = Colors.darkColor
-        
-        tableView.separatorStyle = .none
         // MARK: - Registering Table Cell xib
         tableView.register(UINib(nibName: SettingsTableViewCell.description(), bundle: nil), forCellReuseIdentifier: SettingsTableViewCell.description())
+        tableView.separatorStyle = .none
+    }
+    
+    private func configure() {
+        title = "Settings"
+        view.backgroundColor = Colors.darkColor
     }
     
     // MARK: - Table view data source
@@ -66,6 +65,7 @@ class SettingsViewController: UITableViewController {
 //    }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let headerView = UIView()
         headerView.frame = CGRect(x: 20, y: 8, width: 320, height: 20)
         //headerView.backgroundColor = UIColor.red

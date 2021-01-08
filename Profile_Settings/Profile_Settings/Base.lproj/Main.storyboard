@@ -326,8 +326,6 @@
                         <outlet property="seeAllPostsButton" destination="vtV-8B-xTM" id="ZVe-Fr-sXM"/>
                         <outlet property="seeAllRecentFollowersButton" destination="FUE-GQ-QfW" id="bkA-iU-NTy"/>
                         <outlet property="statusView" destination="0k9-vg-LQb" id="n8W-H5-zhR"/>
-                        <outlet property="userImage" destination="PGU-KQ-VjL" id="J6v-wg-Dbh"/>
-                        <outlet property="userImageView" destination="qFS-11-SpF" id="ssY-mk-qfr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HVp-7F-Ea1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

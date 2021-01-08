@@ -21,7 +21,10 @@ class SettingsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-     
+        configure()
+    }
+    
+    private func configure() {
         view.backgroundColor = Colors.grayColor
         view.layer.cornerRadius = 20
         

@@ -16,8 +16,8 @@ class ProfileViewController: UIViewController {
     // MARK: - @IBOutlet
     @IBOutlet var profileView: UIView!
     @IBOutlet var nameCountryView: UIView!
-    @IBOutlet var userImageView: UIView!
-    @IBOutlet var userImage: UIImageView!
+//    @IBOutlet var userImageView: UIView!
+//    @IBOutlet var userImage: UIImageView!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var countryLabel: UILabel!
     @IBOutlet var statusView: UIView!
@@ -41,8 +41,11 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.title = "Profile"
+        configure()
+    }
+    
+    private func configure() {
+        title = "Profile"
         view.backgroundColor = Colors.darkColor
         
         // MARK: - Profile View Data
@@ -50,17 +53,17 @@ class ProfileViewController: UIViewController {
         profileView.layer.cornerRadius = 50
         nameCountryView.backgroundColor = Colors.grayColor
         
-        userImageView.layer.cornerRadius = 25
-        userImageView.layer.shadowColor = Colors.darkColor.cgColor
-        userImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
-        userImageView.layer.shadowRadius = 25
-        userImageView.layer.shadowOpacity = 0.9
-        userImageView.layer.shouldRasterize = true
-        userImageView.layer.rasterizationScale = UIScreen.main.scale
+//        userImageView.layer.cornerRadius = 25
+//        userImageView.layer.shadowColor = Colors.darkColor.cgColor
+//        userImageView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
+//        userImageView.layer.shadowRadius = 25
+//        userImageView.layer.shadowOpacity = 0.9
+//        userImageView.layer.shouldRasterize = true
+//        userImageView.layer.rasterizationScale = UIScreen.main.scale
         
-        userImage.image = Images.userAvatar
-        userImage.layer.cornerRadius = 25
-        userImage.clipsToBounds = true
+//        userImage.image = Images.userAvatar
+//        userImage.layer.cornerRadius = 25
+//        userImage.clipsToBounds = true
   
         nameLabel.text = "Lori Schneider"
         nameLabel.textAlignment = .center
@@ -79,7 +82,7 @@ class ProfileViewController: UIViewController {
         
         postData.text = "203"
         postData.textColor = Colors.greenColor
-        postData.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)     
+        postData.font = UIFont.fontConfig(Fonts.FuturaMedium, 16)
         
         postLabel.text = "Posts"
         postLabel.textColor = Colors.lightGrayColor
@@ -152,6 +155,8 @@ class ProfileViewController: UIViewController {
         
         self.navigationController?.navigationBar.backIndicatorImage = backButtonImage
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = backButtonImage
+        
+        
     }
     
     // MARK: - UIBarButtonTap
